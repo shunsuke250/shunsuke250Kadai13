@@ -64,8 +64,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             withIdentifier: cellIdentifier,
             for: indexPath) as! CheckListTableViewCell
         let (fruitName, shouldShowImage) = fruits[indexPath.row]
-        cell.customLabel.text = fruitName
-        cell.checkImage.isHidden = !shouldShowImage
+
+        cell.configure(name: fruitName, isChecked: shouldShowImage)
 
         return cell
     }
